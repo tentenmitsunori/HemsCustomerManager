@@ -24,23 +24,16 @@
 <!-- Style -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheets/common.css">
 <style>
-body { padding-top: 80px; padding-bottom: 40px; }
-footer {text-align: center;}
-@media (min-width: 768px) {
-	.navbar-brand {
-		opacity: 0;
-	}
-	.navbar-header {
-		background: url("images/logo.png") no-repeat left center;
-		background-size: contain;
-		height: 50px;
-		width: 240px;
-	}
-}
 #main > div.row {
 	margin-bottom: 120px;
-
+}
+#main img {
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 3px 3px #ddd;
+	   -moz-box-shadow: 0 0 3px 3px #ddd;
+	        box-shadow: 0 0 3px 3px #ddd;
 }
 </style>
 
@@ -95,13 +88,12 @@ footer {text-align: center;}
 	<div class="row">
 		<div class="col-md-12">
 			<div class="jumbotron">
-				<h3>Digital Grid 参加者募集</h3>
+				<h3 class="text-success">Digital Grid 参加者募集</h3>
 				<hr>
 				<p><i class="fa fa-asterisk"></i> デジタルグリッドとは、電力のインターネット化をコンセプトとし、電力識別・融通できるデジタルグリッドルーター・各種センサー・蓄電池を活用して革新的な電力サービスの提供を目指した技術です。</p>
-				<p><i class="fa fa-asterisk"></i> 家庭内に設置するルーター・センサー・蓄電池を通じて電力需要データを活用して革新的な電力サービスにつながる研究を実施し、ベンチャー企業の設立を目指します。</p>
-				<p><i class="fa fa-asterisk"></i> 本実証実験は文部科学省START事業の指定を受けた実験です。<small>START事業とは、文部科学省主導のもと始められた大学発新産業創出拠点プロジェクトです。大学発ベンチャーの起業前段階から政府資金と民間の事業化ノウハウ等を組み合わせることにより、事業戦略・知財戦略を構築し、市場や出口を見据えて事業化を目指します。</small></p>
-				<hr>
-				<p><a href="form.html" class="btn btn-primary btn-lg" role="button">今すぐ参加申し込み!</a></p>
+				<p><i class="fa fa-asterisk"></i> 家庭内に設置するルーター・センサー・蓄電池を通じて電力需要データを活用して革新的な電力サービスにつながる研究を実施し、ベンチャー企業の設立を目指しています。</p>
+				<p><a href="form.html" class="btn btn-success btn-lg pull-right" role="button">今すぐ参加申し込み!</a></p>
+				<br class="clearfix">
 			</div><!-- container -->	
 		</div>
 	</div>
@@ -112,8 +104,8 @@ footer {text-align: center;}
 
 	<div class="row">
 		<div class="col-md-6">
-			<h4><i class="fa fa-lightbulb-o"></i> 実証実験の目的</h4>
-			<p>皆様から頂戴した電力需要データは、デジタルグリッドを用いたサービス設計に活用します。</p>
+			<h4 class="text-success"><i class="fa fa-lightbulb-o"></i> 実証実験の目的</h4>
+			<p>皆様から頂戴した電力需要データは、電力需要予測手法の研究開発・デジタルグリッドを用いたサービス設計に活用します。</p>
 			<p>例えば...
 			<ul>
 				<li>電源選択が可能となる将来における、電力価格シミュレーション</li>
@@ -130,7 +122,7 @@ footer {text-align: center;}
 
 	<div class="row">
 		<div class="col-md-6">
-			<h4><i class="fa fa-tachometer"></i> 設置する機器</h4>
+			<h4 class="text-success"><i class="fa fa-tachometer"></i> 設置する機器</h4>
 			<p>ルーター、電力センサー、蓄電池を設置いたします。</p>
 			<ul class="list-unstyled">
 				<li>***</li>
@@ -144,7 +136,7 @@ footer {text-align: center;}
 
 	<div class="row">
 		<div class="col-md-6">
-			<h4><i class="fa fa-calendar"></i> スケジュール</h4>
+			<h4 class="text-success"><i class="fa fa-calendar"></i> スケジュール</h4>
 			<p>以下のスケジュールを予定しております。</p>
 			<dl class="dl-horizontal">
 				<dt>2014年9月頃</dt>
@@ -164,10 +156,9 @@ footer {text-align: center;}
 		</div>
 	</div>
 
-
 	<div class="row">
 		<div class="col-md-6">
-			<h4><i class="fa fa-users"></i> 実証実験に参加できる方</h4>
+			<h4 class="text-success"><i class="fa fa-users"></i> 実証実験に参加できる方</h4>
 			<p>2014年9月から2015年9月までの1年間、福島県郡山市にご在住の家庭のみ対象です。<small>その他の地域にご在住の方、工場やサービス業など家庭以外の方は、ご参加できません。</small>
 			</p>
 			<br>
@@ -183,6 +174,27 @@ footer {text-align: center;}
 			<img class="img-responsive" src="images/slide_6.png" alt="実証実験で用いるアンケート">
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+		<h4 class="text-success"><i class="fa fa-university"></i> 本実証実験の位置付け</h4>
+		<p>本実証実験は文部科学省START事業の採択を受けた実験です。<small>START事業とは、文部科学省主導のもと始められた大学発新産業創出拠点プロジェクトです。大学発ベンチャーの起業前段階から政府資金と民間の事業化ノウハウ等を組み合わせることにより、事業戦略・知財戦略を構築し、市場や出口を見据えて事業化を目指します。</small></p>
+		</div>
+		<div class="col-md-6">
+			<img src="images/slide_7.png" alt="START事業の説明" class="img-responsive">
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<p><a href="form.html" class="btn btn-success btn-lg pull-right" role="button">今すぐ参加申し込み!</a></p>			
+			</div>
+		</div>
+	</div>
+
 
 	<!-- Footer -->
 	<hr>
