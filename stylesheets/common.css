@@ -18,3 +18,7 @@ footer {
 		width: 240px;
 	}
 }
+
+a:not([role=button]) {
+	color: #ff9800;
+}
