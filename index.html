@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/common.css">
 <style>
+/* Jumbotron */
 body {
 	padding-top: 0px;
 }
@@ -43,6 +44,7 @@ div.nabvar {
 	margin-top: 120px;
 	margin-bottom: 60px;
 }
+/* Main */
 #main > div.row {
 	margin-bottom: 120px;
 }
@@ -50,16 +52,25 @@ div.nabvar {
 	margin-bottom: 0px;
 }
 #main img {
+	margin-top: 30px;
 	border-radius: 6px;
 	-webkit-box-shadow: 0 0 3px 3px #ddd;
 	   -moz-box-shadow: 0 0 3px 3px #ddd;
 	        box-shadow: 0 0 3px 3px #ddd;
 }
-#main p, #main ul, #main dl {
-	font-size: larger;
-}
 #main p {
 	margin-bottom: 0px;
+}
+#main-facebook {
+	margin-top: 120px;
+}
+@media (min-width: 768px) {
+	#main p, #main ul, #main dl {
+		font-size: larger;
+	}
+	#main-facebook {
+		margin-top: 0px;
+	}
 }
 </style>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -202,7 +213,7 @@ div.nabvar {
 			<p><a href="form.html" class="btn btn-success btn-lg pull-right" role="button" data-ga-link="footer">今すぐ参加申し込み!</a></p>			
 			<br class="clearfix">
 		</div>
-		<div class="col-md-5">
+		<div id="main-facebook" class="col-md-5">
 			<h4 class="text-success"><i class="fa fa-facebook-square"></i> Meet us on Facebook</h4>
 			<div class="fb-like-box" data-href="http://www.facebook.com/pages/The-Digital-Grid-Consortium/316693771763336" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 			<style>.fb-like-box, .fb-like-box iframe[style], .fb-like-box span[style] { width:100% !important; }</style>
