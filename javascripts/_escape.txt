@@ -1,0 +1,106 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+(function ($) {
+	/*=====================================================================================
+	INVOKE MEDIATOR PATTERN
+	=======================================================================================*/
+	$.Mediator = (function () {	 
+		var _topics = {};
+		function Mediator() {};	 
+		Mediator.prototype.subscribe = function (topic, callback) {
+			if (!this.has(topic)) {
+				_topics[topic] = [];
+			};
+			_topics[topic].push(callback);
+			return true;
+		};	 
+		Mediator.prototype.unsubscribe = function (topic) {
+			if (!this.has(topic)) {
+				return false;
+			} else {
+				_topics[topic].length = 0;
+				return true;				
+			};
+		};	 
+		Mediator.prototype.publish = function () {
+			var args = Array.prototype.slice.call(arguments);
+			var topic = args.shift();	 
+			if (!this.has(topic)) {
+				return false;
+			};	 
+			for (var i = _topics[topic].length; i--;) { // LIFO
+				_topics[topic][i].apply(undefined, args);
+			};
+			return true;
+		};
+		Mediator.prototype.list = function () {
+			return _topics;
+		};	 
+		Mediator.prototype.has = function (topic) {
+			return _topics.hasOwnProperty(topic);
+		};
+		return Mediator;	 
+	})();
+})(jQuery);	
+</script>
+<script>
+$(function () {
+	// initialize mediator
+	var mediator = new $.Mediator();
+
+	// Validate Phone Number
+	// http://company.miyanavi.net/archives/1315
+	mediator.subscribe("/form/phone/validate", function () {
+		var $el = $("input[name=phone]");
+		var data = "" + $el.val() || "";
+
+		// 半角数字と+-のみ残す
+		var hankaku = data.replace(/[Ａ-Ｚａ-ｚ０-９]|\－|\＋/g,function(s){return String.fromCharCode(s.charCodeAt(0)-0xFEE0)});
+		var zenkakuDel = new String( hankaku ).match(/\d|\-|\+/g);
+		zenkakuDel = zenkakuDel.join("");
+
+		$el.val(zenkakuDel);
+	});
+	mediator.subscribe("/form/email/validate", function () {
+		var $el = $("input[name=email]");
+		var data = "" + $el.val() || "";
+
+        var zenkigou = "＠－ー＋＿．，、";
+        var hankigou = "@--+_...";
+
+		// 指定された全角記号のみを半角に変換
+        var str = ""; 
+        for (var i = 0; i < data.length; i++) {
+            var dataChar = data.charAt(i);
+            var dataNum = zenkigou.indexOf(dataChar,0);
+            if (dataNum >= 0) dataChar = hankigou.charAt(dataNum);
+            str += dataChar;
+        }
+        // 定番の、アルファベットと数字の変換処理
+        var hankaku = str.replace(/[Ａ-Ｚａ-ｚ０-９]/g,function(s){return String.fromCharCode(s.charCodeAt(0)-0xFEE0)});
+        $el.val(hankaku);
+
+    });
+
+    mediator.subscribe("/form/submit", function () {
+    	console.log("fire");
+    	$("form").submit();
+
+	});
+	mediator.subscribe("/form/start", function () {
+		mediator.publish("/form/phone/validate")
+		&& mediator.publish("/form/email/validate")
+		&& mediator.publish("/form/submit");
+	});
+	// $("form").on("submit", function (e) {
+	// 	e.preventDefault();
+	// 	mediator.publish("/form/start");
+	// });
+	$("button[type=submit]").on("click", function (e) {
+		e.preventDefault();
+		mediator.publish("/form/start");
+	});
+
+});
+</script>
+<!-- End of script -->

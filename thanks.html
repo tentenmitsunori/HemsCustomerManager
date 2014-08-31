@@ -25,6 +25,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <body>
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -49,66 +50,22 @@
 
 <div class="container">
 	<div class="row">
-			<div class="col-md-offset-2 col-md-8">
-			<h4 class="text-success">ご登録フォーム</h4>
-			<hr>
-			<form role="form" class="form-horizontal" action="thanks.php" method="POST">
-				<fieldset>
-					<!-- <legend>ご登録フォーム</legend> -->
-					<div class="form-group">
-						<label for="address" class="col-sm-2 control-label">ご住所</label>
-						<div class="col-sm-10">
-							<input class="form-control" type="text" name="address" placeholder="福島県郡山市..." required="true">
-							<p class="help-block">福島県郡山市に在住の方のみ申込可能です。</p>
-						</div>
-					</div>
-					<br>
-					<div class="form-group">
-						<label for="phone" class="col-sm-2 control-label">お電話番号</label>
-						<div class="col-sm-10">
-							<input class="form-control input-sm" type="text" name="phone" placeholder="024-***-****" required="true">
-							<p class="help-block">市外局番から記入をお願いします。</p>
-						</div>	
-					</div>
-					<br>
-					<div class="form-group">
-						<label for="email" class="col-sm-2 control-label">メールアドレス</label>
-						<div class="col-sm-10">
-							<input class="form-control input-sm" type="text" name="email" placeholder="sample@sample.com" required="true">
-							<p class="help-block">正確に記入をお願いします。</p>
-						</div>
-					</div>
-					<br>
-					<div class="form-group">
-						<label for="last_name" class="col-sm-2 control-label">姓 (漢字)</label>
-						<div class="col-sm-4">
-							<input class="form-control input-sm" type="text" name="last_name" required="true" placeholder="姓 (漢字)">
-						</div>
-						<label for="first_name" class="col-sm-2 control-label">名 (漢字)</label>
-						<div class="col-sm-4">
-							<input class="form-control input-sm" type="text" name="first_name" required="true" placeholder="名 (漢字)">
-						</div>
-					</div>
-					<br>
-					<div class="form-group">
-						<label for="last_name_kana" class="col-sm-2 control-label">姓 (かな)</label>
-						<div class="col-sm-4">
-							<input class="form-control input-sm" type="text" name="last_name_kana" required="true" placeholder="姓 (かな)">
-						</div>
-						<label for="first_name_kana" class="col-sm-2 control-label">名 (かな)</label>
-						<div class="col-sm-4">
-							<input class="form-control input-sm" type="text" name="first_name_kana" required="true" placeholder="名 (かな)">
-						</div>
-					</div>
-				</fieldset>
-				<br>
-				<button type="submit" class="btn btn-success pull-right">この内容で登録する!</button>
-				<br class="clearfix">
-				<hr>
-				<p class="small">ご登録いただいたメールアドレスに受付確認メールを送信いたします。なお、登録情報は、本応募の用途に限り使用し、個人情報は正当な理由なく第三者への開示、譲渡及び貸与することは一切ありません。</p>
-			</form>
+		<div class="col-md-offset-2 col-md-8">
+		<h4 class="text-success">ご登録ありがとうございました。</h4>
+
+
+<!-- ========================================================================================================================
+
+	
+	 INSERT PHP SCRIPT HERE.
+
+
+	 ======================================================================================================================== -->
+
+			
 		</div>
 	</div><!-- row -->
+
 </div><!-- container -->
 
 <!-- Footer -->
@@ -130,6 +87,11 @@
 (function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 ga("create","UA-XXXX-XXXX","localhost");
 ga("send","pageview");
+// FB.Event.subscribe("edge.create",function(a){ga(["send","social","facebook","like",a])});
+// FB.Event.subscribe("edge.remove",function(a){ga(["send","social","facebook","unlike",a])});
+// FB.Event.subscribe("message.send",function(a){ga(["send","social","facebook","send",a])});
+// http://memo.sanographix.net/post/87203189890
+// http://www.find-job.net/startup/universalanalytics
 </script>
 </body>
 </html>

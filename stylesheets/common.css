@@ -1,0 +1,24 @@
+body {
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+
+footer {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+		opacity: 0;
+	}
+	.navbar-header {
+		background: url("../images/logo.png") no-repeat left center;
+		background-size: contain;
+		height: 50px;
+		width: 240px;
+	}
+}
+
+a:not([role=button]) {
+	color: #ff9800;
+}

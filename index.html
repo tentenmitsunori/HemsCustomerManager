@@ -5,43 +5,85 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="福島県郡山市におけるデジタルグリッドの実証実験の参加者募集ページです!">
-<meta name="author" content="DIgital Grid">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<!-- <link rel="icon" href="../../favicon.ico"> -->
-<title>Digital Grid</title>
-
-
-<!-- Open Graph Protocol -->
-<meta property="og:title" content="Digital Grid" />
+<meta name="author" content="Digital Grid">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="favicon.ico">
+<title>The Digital Grid</title>
+<meta property="og:title" content="The Digital Grid" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="福島県郡山市におけるデジタルグリッドの実証実験の参加者募集ページです!" />
-<!-- <meta property="og:url" content="http://*******************************************************" />
-<meta property="og:email" content="****************************** @ *************************" />
-<meta property="og:image" content="*************** / ***************.png "/> -->
-<meta property="og:site_name" content="Digital Grid"/>
-
-
-<!-- Style -->
+<meta property="og:url" content="http://www.digitalgrid.org/" />
+<meta property="og:email" content="admin@ml.digitalgrid.org" />
+<meta property="og:image" content="http://www.digitalgrid.org/images/stories/logo.png "/>
+<meta property="og:site_name" content="The Digital Grid"/>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheets/common.css">
 <style>
-body { padding-top: 70px; padding-bottom: 30px; }
-footer {text-align: center;}
+/* Jumbotron */
+body {
+	padding-top: 0px;
+}
+div.nabvar {
+	margin-bottom: 0px;
+}
+#jumbotron {
+	background: url(images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 60px;
+}
+#jumbotron p.lead, #jumbotron h2 {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+#jumbotron div.row {
+	margin-top: 120px;
+	margin-bottom: 60px;
+}
+/* Main */
+#main > div.row {
+	margin-bottom: 120px;
+}
+#main > div.row:last-child {
+	margin-bottom: 0px;
+}
+#main img {
+	margin-top: 30px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 3px 3px #ddd;
+	   -moz-box-shadow: 0 0 3px 3px #ddd;
+	        box-shadow: 0 0 3px 3px #ddd;
+}
+#main p {
+	margin-bottom: 0px;
+}
+#main-facebook {
+	margin-top: 120px;
+}
+@media (min-width: 768px) {
+	#main p, #main ul, #main dl {
+		font-size: larger;
+	}
+	#main-facebook {
+		margin-top: 0px;
+	}
+}
 </style>
-
-
-<!-- Script -->
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<script>// Insert Google Analytics here.</script>
-
 </head>
-
 <body>
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>(function(a,b,c){var d=a.getElementsByTagName(b)[0];a.getElementById(c)||(a=a.createElement(b),a.id=c,a.src="//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=1480479848867550&version=v2.0",d.parentNode.insertBefore(a,d))})(document,"script","facebook-jssdk");</script>
+
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -52,71 +94,165 @@ footer {text-align: center;}
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Digital Grid</a>
+			<a class="navbar-brand" href="index.html">Digital Grid</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li class="dropdown-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
-						</ul>
-				</li>
+				<li><a href="form.html" data-ga-link="navbar">ご登録</a></li>
+				<li><a href="contact.html">お問い合わせ</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
 </div>
 
-<div class="container">
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<!-- Jumbotron -->
+<div id="jumbotron">
 	<div class="container">
-		<h5>Digital Grid 参加者募集</h5>
-		<p>文部科学省START事業に基づき、東京大学がデジタルグリッド技術の研究のために、電力センサーをご家庭に設置して、電力データを取得し、新たな電力サービスにつながる研究を実施し、ベンチャー企業の設立を目指す。</p>
-		<p><a href="form.html" class="btn btn-primary btn-lg" role="button">今すぐ参加申し込み</a></p>
-	</div><!-- Jumbotron -->
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Digital Grid 参加者募集</h2>
+				<p class="lead"><i class="fa fa-asterisk"></i> デジタルグリッドとは、電力のインターネット化をコンセプトとし、電力識別・融通できるデジタルグリッドルーター・各種センサー・蓄電池を活用して革新的な電力サービスの提供を目指した技術です。</p>
+				<p class="lead"><i class="fa fa-asterisk"></i> 家庭内に設置するルーター・センサー・蓄電池を通じて電力需要データを収集し、革新的な電力サービスにつながる研究をすることで、ベンチャー企業の設立を目指しています。</p>
+				<p><a href="form.html" class="btn btn-success btn-lg pull-right" role="button" data-ga-link="jumbotron">今すぐ参加申し込み!</a></p>
+				<br class="clearfix">
+			</div>
+		</div>
+	</div>			
+</div>
+
+<!-- Content -->
+<div class="container" id="main">
+	<div class="row">
+		<div class="col-md-7">
+			<h4 class="text-success"><i class="fa fa-lightbulb-o"></i> 実証実験の目的</h4>
+			<p>皆様から頂戴する電力消費量データ(1年間)、家庭内の温度・湿度(1年間)、家族構成などの需要家プロフィールは、電力需要予測手法の研究開発に活用されます。</p>
+			<p>電力価格シミュレーションや蓄電池を活用したピークカットなど、電力自由化後に展開するデジタルグリッドを用いたサービス設計のための貴重な足がかりとなります。</p>
+			<p>各種データを提供くださった参加者には、本実証実験の研究成果を報告いたします。</p>
+		</div>
+		<div class="col-md-5">
+			<img src="images/1.png" class="img-responsive" alt="研究成果のイメージ">
+		</div>
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-md-7">
+			<h4 class="text-success"><i class="fa fa-users"></i> 実証実験に参加できる方</h4>
+			<p>2014年9月から2015年9月までの1年間、福島県郡山市にご在住の家庭のみ、本実証実験に参加できます。</p>
+			<small>その他の地域にご在住の方、工場やサービス業など家庭以外の方は、ご参加できません。</small>
+			<p><br>1年間の電力消費量・温湿度データ取得の他に、以下の作業にご協力いただく予定です。</p>
+			<ul>
+				<li>家族構成などのプロフィールのご提供</li>
+				<li>センサおよびルータの取り付け</li>
+				<li>アンケート記入</li>
+			</ul>
+			<small>工事は1 ~ 3時間程度を要し、メインブレーカをOFFにしていただく場合がございます。</small>
+		</div>
+		<div class="col-md-5">
+			<img src="images/2.png" class="img-responsive" alt="実証実験で用いるアンケート">
+		</div>
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-md-7">
+			<h4 class="text-success"><i class="fa fa-calendar"></i> スケジュール</h4>
+			<p>以下のスケジュールを予定しております。</p>
+			<dl class="dl-horizontal">
+				<dt>2014年9月頃</dt>
+				<dd>参加者を確定します。</dd>
+				<dt>2014年9月 ~ </dt>
+				<dd>順次、デジタルグリッド関連設備の設置工事をします。</dd>
+				<dt>2015年3月頃</dt>
+				<dd>第一回アンケート調査・中間報告を予定しています。</dd>
+				<dt>2015年9月頃</dt>
+				<dd>第二回アンケート調査・最終報告を予定しています。</dd>
+				<dt>2015年9月 ~ </dt>
+				<dd>順次、デジタルグリッド関連設備の撤去工事をします。</dd>
+			</dl>
+		</div>
+		<div class="col-md-5">
+			<img src="images/3.png" class="img-responsive" alt="スケジュール">
+		</div>
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-md-7">
+			<h4 class="text-success"><i class="fa fa-tachometer"></i> 設置する機器</h4>
+			<p><a href="http://digitalgrid.u-tokyo.ac.jp/">東京大学デジタルグリッド寄附講座</a>が独自に開発したルーター、各種センサーをご家庭内に設置いたします。</p>
+			<dl class="dl-horizontal">
+				<dt>電力センサ</dt>
+				<dd>分電盤に取り付け、消費電力・電圧・電流を測定します。<br>大きさ:150×66×50mm、重さ:150g</dd>
+				<dt>温湿度センサ</dt>
+				<dd>家庭内の温度・湿度を測定します。<br>大きさ:110×60×30mm、重さ:100g程度</dd>
+				<dt>スマートルータ</dt>
+				<dd>各センサのデータを無線を通じて収集し、家庭内LANを経由して伝送します。<br>大きさ:88×91×30mm、重さ:100g程度</dd>
+			</dl>
+			<small>仕様・画像は開発中のものです。また、各機器とも不快な振動・音・熱は発生せず、安心してお使いいただけます。</small>
+		</div>
+		<div class="col-md-5">
+			<img src="images/4.png" class="img-responsive" alt="設置する機器">
+		</div>
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-md-7">
+			<h4 class="text-success"><i class="fa fa-university"></i> 実証実験の位置付け</h4>
+			<p>実証実験の参加者より取得した電力消費量などのデータは、総括寄附講座の共同代表を務める<a href="http://ipr-ctr.t.u-tokyo.ac.jp/sklab/" target="_blank">坂田一郎教授</a>と<a href="http://www.digitalgrid.t.u-tokyo.ac.jp/" target="_blank">阿部力也特任教授</a>の下で分析いたします。</p>
+			<br>
+			<p>また、本実証実験は<a href="http://www.mext.go.jp/a_menu/kagaku/chiiki/daigaku/1340218.htm" target="_blank">文部科学省START事業</a>の採択を受けております。</p>
+			<small>START事業とは、文部科学省主導のもと始められた大学発新産業創出拠点プロジェクトです。大学発ベンチャーの起業前段階から政府資金と民間の事業化ノウハウ等を組み合わせることにより、事業戦略・知財戦略を構築し、市場や出口を見据えて事業化を目指します。</small>
+		</div>
+		<div class="col-md-5">
+			<img src="images/5.png" class="img-responsive" alt="START事業の説明">			
+		</div>
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-md-7">
+			<h4 class="text-success"><i class="fa fa-asterisk"></i> Digital Grid 参加者募集</h4>
+			<p>デジタルグリッドは電力と情報を融合した次世代の送電網です。信頼性の高い送電網や、再生可能で柔軟性のある電源の普及を可能にします。<br>皆様の参加を心よりお待ちしております。</p>
+			<p><a href="form.html" class="btn btn-success btn-lg pull-right" role="button" data-ga-link="footer">今すぐ参加申し込み!</a></p>			
+			<br class="clearfix">
+		</div>
+		<div id="main-facebook" class="col-md-5">
+			<h4 class="text-success"><i class="fa fa-facebook-square"></i> Meet us on Facebook</h4>
+			<div class="fb-like-box" data-href="http://www.facebook.com/pages/The-Digital-Grid-Consortium/316693771763336" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+			<style>.fb-like-box, .fb-like-box iframe[style], .fb-like-box span[style] { width:100% !important; }</style>
+		</div>
+	</div><!-- row -->
 </div><!-- container -->
 
+<!-- Footer -->
 <div class="container">
-	<!-- Example row of columns -->
 	<div class="row">
-		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-		</div>
-		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-		</div>
-		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+		<div class="col-md-12">
+			<hr>
+			<footer>
+				<p>&copy; The University of Tokyo -  Presidential Endowed Chair for Electric Power Network Innovation by Digital Grid 2014</p>
+			</footer>			
 		</div>
 	</div>
+</div>
 
-	<hr>
-
-	<footer>
-		<p>&copy; Digital Grid 2014</p>
-	</footer>
-</div><!-- container -->
-
-
+<!-- Javascript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+ga("create","UA-XXXX-XXXX","localhost");
+ga("send","pageview");
+// FB.Event.subscribe("edge.create",function(a){ga(["send","social","facebook","like",a])});
+// FB.Event.subscribe("edge.remove",function(a){ga(["send","social","facebook","unlike",a])});
+// FB.Event.subscribe("message.send",function(a){ga(["send","social","facebook","send",a])});
+// http://memo.sanographix.net/post/87203189890
+// http://www.find-job.net/startup/universalanalytics
+</script>
+<script>
+$(function () {
+	$("a[data-ga-link]").on("click", function () {
+		var value = "" + $(this).attr("data-ga-link") || "";
+		value && ga('send', 'event', 'screen-transition', 'Click', value);
+	});
+});
+</script>
 </body>
-
-
-
-
 </html>
