@@ -241,7 +241,7 @@ div.nabvar {
 $(function () {
 	$("a[data-ga-link]").on("click", function () {
 		var value = "" + $(this).attr("data-ga-link") || "";
-		value && ga('send', 'event', 'screen-transition', 'Click', value);
+		value && ga('send', 'event', 'button', 'click', value);
 	});
 });
 </script>
