@@ -2,7 +2,8 @@
 
 class User{
 	public function getAll(){
-	
+		$users = mysql_query('SELECT * from users');
+		return $users;	
 	}
 
 	public function create($params){

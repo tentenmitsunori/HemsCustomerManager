@@ -1,8 +1,8 @@
 <?php
    require "./config/db.php";
    require "./model/user.php";
-   $uer = new User();
-   $uer->create($_POST);
+   $user = new User();
+   $user->create($_POST);
    mb_language("Ja");
    mb_internal_encoding("utf-8");
    $to= $_POST["email"];
