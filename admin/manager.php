@@ -4,9 +4,6 @@
    $user = new User();
    $users = $user->getAll();
 ?>
-
-
-
 <!doctype html>
 <html lang="ja-JP">
 <head>
@@ -56,7 +53,9 @@ footer { text-align: center; }
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
+			<a class="btn btn-lg btn-primary pull-right" href='./csv_export.php'>csvダウンロード</a>
 			<h4 class="text-primary">登録者一覧</h4>
+
 			<!-- PHP starts here -->
 			<table class="table table-condensed table-striped">
 				<thead>
@@ -107,13 +106,3 @@ footer { text-align: center; }
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
