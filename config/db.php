@@ -1,4 +1,3 @@
-<meta charset='utf-8'>
 <?php
   //dbの設定を記入
   $db = "HemsCustomerManager";	
