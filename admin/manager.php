@@ -4,6 +4,7 @@
    $user = new User();
    $users = $user->getAll();
 ?>
+<a href='./csv_export.php'>csvダウンロード</a>
 <table>
   <tr>
 	<th>姓</th>
