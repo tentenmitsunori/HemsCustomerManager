@@ -3,13 +3,13 @@
    require "./model/user.php";
    $uer = new User();
    $uer->create($_POST);
-   mb_language("Ja") ;
-   mb_internal_encoding("EUC-JP") ;
-   $mailto= $_POST["email"];
+   mb_language("Ja");
+   mb_internal_encoding("utf-8");
+   $to= $_POST["email"];
    $subject="タイトルですよ";
    $content="内容を入れます\nあああ\nいいい";
-   $mailfrom="From:" .mb_encode_mimeheader("事務局") ."<tentenmitsunori@gmail.com>";
-   $flag = mb_send_mail($mailto,$subject,$content,$mailfrom);
+   $from = "From: tentenmitsunori@gmail.com\r\n"; 
+   $isSuccess = mb_send_mail($to, $subject, $content, $from, $from);
 ?>
 <!doctype html>
 <html lang="ja-JP">
