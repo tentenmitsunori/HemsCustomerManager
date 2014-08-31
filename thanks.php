@@ -18,7 +18,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="福島県郡山市におけるデジタルグリッドの実証実験の参加者募集ページです!">
-<meta name="author" content="DIgital Grid">
+<meta name="author" content="Digital Grid">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="icon" href="favicon.ico">
 <title>The Digital Grid</title>
@@ -96,15 +96,6 @@
 <!-- Javascript -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script>
-(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
-ga("create","UA-XXXX-XXXX","localhost");
-ga("send","pageview");
-// FB.Event.subscribe("edge.create",function(a){ga(["send","social","facebook","like",a])});
-// FB.Event.subscribe("edge.remove",function(a){ga(["send","social","facebook","unlike",a])});
-// FB.Event.subscribe("message.send",function(a){ga(["send","social","facebook","send",a])});
-// http://memo.sanographix.net/post/87203189890
-// http://www.find-job.net/startup/universalanalytics
-</script>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-54318293-1","auto");ga("send","pageview");</script>
 </body>
 </html>
