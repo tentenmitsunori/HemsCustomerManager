@@ -17,7 +17,7 @@
 		.','.$row["address"]."\n";
 	}
 	//出力ファイル名の作成
-	$csv_file = "csv_". date ( "Ymd" ) .'.csv';
+	$csv_file = "csv_.csv";
 
 	//文字化けを防ぐ
 	$csv_data = mb_convert_encoding ( $csv_data , "sjis-win" , 'utf-8' );
