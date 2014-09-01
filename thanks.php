@@ -7,11 +7,18 @@
    mb_internal_encoding("utf-8");
    $to = $_POST["email"];
    $subject = "ご登録ありがとうございます【デジタルグリッド実証実験の参加確認メール】";
-   $content = "この度はご登録いただき誠にありがとうございました。下記、お申込みいただきました内容になります。";
-   $content .= "\nお名前 : ".$_POST["last_name"]." ".$_POST["first_name"]." (".$_POST["last_name_ja"]." ".$_POST["first_name_ja"].")";
-   $content .= "\n電話番号 : ".$_POST["phone"];
-   $content .= "\nご住所 : ".$_POST["address"];
-   $content .= "\n\n東京大学総括プロジェクト機構「電力ネットワークイノベーション」総括寄附講座";
+   $content = "この度はご登録いただき誠にありがとうございました。\n\n下記、お申込みいただきました内容になります。";
+   $content .= "\n------------------------------------------------------------";
+   $content .= "\n▼お申し込み情報\n\n■お名前";
+   $content .= "\n".$_POST["last_name"]." ".$_POST["first_name"]." (".$_POST["last_name_ja"]." ".$_POST["first_name_ja"].")";
+   $content .= "\n\n■お電話番号";
+   $content .= "\n".$_POST["phone"];
+   $content .= "\n\n■ご住所";
+   $content .= "\n".$_POST["address"];
+   $content .= "\n------------------------------------------------------------";
+   $content .= "\n\n東京大学総括プロジェクト機構「電力ネットワークイノベーション」総括寄附講座 (http://digitalgrid.u-tokyo.ac.jp/)";
+   $content .= "\n〒113-0033 東京都文京区本郷7-3-1 工学部3号館306号室";
+   $content .= "\nCopyright(C) 2014 The University of Tokyo - Presidential Endowed Chair for Electric Power Network Innovation by Digital Grid";
    $from = "From: info@digitalgrid.u-tokyo.ac.jp\r\n"; 
    $isSuccess = mb_send_mail($to, $subject, $content, $from);
 ?>

@@ -1,4 +1,4 @@
-AuthUserFile /Library/WebServer/Documents/HemsCustomerManager/admin/.htpasswd
+AuthUserFile /home/digitalgrid/www/digitalgrid_org/HemsCustomerManager/admin/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Input ID and Password."
 AuthType Basic
