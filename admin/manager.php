@@ -10,11 +10,12 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="福島県郡山市におけるデジタルグリッドの実証実験の参加者募集ページです!">
-<meta name="author" content="Digital Grid">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
 <title>The Digital Grid</title>
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//connect.facebook.net">
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <style>
